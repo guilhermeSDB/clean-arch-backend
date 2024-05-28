@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: clean_user
+      POSTGRES_USER: clean_user
+      POSTGRES_DB: clean_backend
+    volumes:
+      - clean_backend_pg_data:/bitnami/postgresql
+
+volumes:
+  clean_backend_pg_data:

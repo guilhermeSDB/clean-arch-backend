@@ -1,7 +1,7 @@
-import { Elysia } from "elysia";
+import routes from "./external/api/routes";
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+routes.listen(3000);
 
 console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+  `🦊 Elysia is running at ${routes.server?.hostname}:${routes.server?.port}`
 );
